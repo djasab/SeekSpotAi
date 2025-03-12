@@ -83,22 +83,6 @@ function getMockCoordinates(location: string): { latitude: number; longitude: nu
     'oslo': { lat: 59.9139, lng: 10.7522 },
     'helsinki': { lat: 60.1699, lng: 24.9384 },
     'athens': { lat: 37.9838, lng: 23.7275 },
-    'istanbul': { lat: 41.0082, lng: 28.9784 },
-    'moscow': { lat: 55.7558, lng: 37.6173 },
-    'cairo': { lat: 30.0444, lng: 31.2357 },
-    'cape town': { lat: -33.9249, lng: 18.4241 },
-    'johannesburg': { lat: -26.2041, lng: 28.0473 },
-    'nairobi': { lat: -1.2921, lng: 36.8219 },
-    'mumbai': { lat: 19.0760, lng: 72.8777 },
-    'delhi': { lat: 28.6139, lng: 77.2090 },
-    'beijing': { lat: 39.9042, lng: 116.4074 },
-    'shanghai': { lat: 31.2304, lng: 121.4737 },
-    'seoul': { lat: 37.5665, lng: 126.9780 },
-    'mexico city': { lat: 19.4326, lng: -99.1332 },
-    'rio de janeiro': { lat: -22.9068, lng: -43.1729 },
-    'sao paulo': { lat: -23.5505, lng: -46.6333 },
-    'buenos aires': { lat: -34.6037, lng: -58.3816 },
-    'santiago': { lat: -33.4489, lng: -70.6693 },
     // Add specific neighborhoods in Istanbul
     'kadikoy': { lat: 40.9906, lng: 29.0306 },
     'caddebostan': { lat: 40.9642, lng: 29.0634 },
@@ -416,7 +400,7 @@ function mapPreferencesToPlaceTypes(preferences: string[]): string[] {
     types.push('restaurant');
   }
   
-  return [...new Set(types)];  // Remove duplicates
+  return Array.from(new Set(types));  // Remove duplicates
 }
 
 // Search using Google Places API

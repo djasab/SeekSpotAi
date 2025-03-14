@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <script
-          src={`https://maps.googleapis.com/maps/api/js?key=AIzaSyDfIpW1mntHpBheyec-VTQFiKAStyv3gTU&libraries=places,geometry`}
+          src={`https://maps.googleapis.com/maps/api/js?key= // API key removed for security}
           async
           defer
         ></script>
